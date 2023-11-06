@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="js/index.js" defer></script>
+    <script src="js/bookmark.js" defer></script>
+    <script src="js/buttonAnswer.js" defer></script>
   </head>
   <body>
     <header class="header">
       <h1 class="header__title">Add Quiz Card</h1>
     </header>
     <main>
-      <form>
+      <form data-js="quiz-form">
         <fieldset>
           <label for="your-question">Your question:</label>
           <textarea
@@ -21,7 +24,7 @@
             cols="30"
             rows="10"
             required
-            data-js="your-question"
+            data-js="quiz-question"
           ></textarea>
           <label for="your-answer">Your answer:</label>
           <textarea
@@ -30,14 +33,14 @@
             cols="30"
             rows="10"
             required
-            data-js="your-answer"
+            data-js="quiz-answer"
           ></textarea>
           <label for="your-tag">Tag:</label>
           <input
             type="text"
             name="your-tag"
             id="your-tag"
-            data-js="your-tag"
+            data-js="quiz-tag"
             required
           />
         </fieldset>
@@ -49,6 +52,7 @@
           Submit
         </button>
       </form>
+      <ul class="card-list" data-js="new-quiz-card"></ul>
     </main>
 
     <nav class="navigation">
